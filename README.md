@@ -12,7 +12,7 @@ General requirements
 
 ## Quick Start
 1. cd c:/laragon/www
-2.Cloning the repository
+2. Cloning the repository
 ```bash
 git clone https://github.com/gitmccoyabrasaldo/crud.git
 ```
@@ -26,5 +26,6 @@ Note: Make sure you installed all of the General Requirements
 
 ```bash
 cd crud/interns_project#10
+
 php artisan serve
 ```
