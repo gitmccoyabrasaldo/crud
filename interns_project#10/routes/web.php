@@ -19,13 +19,13 @@ Route::get('/employees', [EmployeeController::class, 'index'])->middleware('auth
 // Route::get('/employees', [EmployeeController::class, 'myView'])->middleware('auth')->name('employees.index');
 
 // Employee Routes
-Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
+Route::get('/employees', [EmployeeController::class, 'index'])->middleware('auth')->name('employees.index');
 
 // view employee
-Route::get('/employees/create', [EmployeeController::class, 'create'])->name('employees.create');
+Route::get('/employees/create', [EmployeeController::class, 'create'])->middleware('auth')->name('employees.create');
 
 // create employee
-Route::post('/employees', [EmployeeController::class, 'store'])->name('employees.store');
+Route::post('/employees', [EmployeeController::class, 'store'])->middleware('auth')->name('employees.store');
 
 // edit employee
 Route::get('/employees/{id}/edit', [EmployeeController::class, 'edit'])->name('employees.edit');
